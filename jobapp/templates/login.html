@@ -1,0 +1,90 @@
+
+<!-- modal for login -->
+
+
+
+<div class="modal fade" id="loginmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: rgb(255, 255, 255);">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color: rgb(1, 65, 87);;border-radius: 20px;border-color: black;">
+      <div class="modal">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form method="post" action="" target="_self" class="needs-validation" novalidate>
+          {% csrf_token %}
+          <div class="container">
+              <h1 class="header" style="text-align: center;">LOG IN</h1>
+              <div class="form-group">
+                  <label for="uname">Username*</label>
+                  <input type="text" style="background-color: rgb(3, 93, 124);color: rgb(0, 0, 0);" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                  
+                </div><br>
+              
+                <div class="form-group">
+                  <label for="pwd">Password*</label>
+                  <input type="password" style="background-color: rgb(3, 93, 124);" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                  
+                </div><br>
+                
+                <input type='submit' class="btn" style="background-color: rgb(3, 93, 124); color: rgb(255, 255, 255);margin-bottom: 5px;" value='LOGIN'>
+                <br><br>
+                
+                <a data-bs-toggle="modal" data-bs-target="#registrationmodal" href="#" id="a02" style="color: rgb(255, 255, 255);margin-left: 130px;">Create New Account</a>
+                
+    
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<script>
+
+//  Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+'use strict'
+
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+const forms = document.querySelectorAll('.needs-validation')
+
+// Loop over them and prevent submission
+Array.from(forms).forEach(form => {
+  form.addEventListener('submit', event => {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+  }, false)
+})
+})()
+
+
+   
+
+
+
+
+
+
+
+</script>
+<style>
+
+div.modal{
+
+  font-family: Arial, Helvetica, sans-serif;
+  
+  
+}
+
+div.modal#signup div.modal-body{
+  padding: 10px;
+}
+
+  </style>
