@@ -162,13 +162,13 @@ HOME
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <img src="{% static 'images/bg12.png' %}" class="img-fluid rounded-circle" alt="..." style="width: 100%;margin-top: 200px;height: 250px;border-radius: 15px;">
+                <img src="{% static 'images/bg12.png' %}" class="img-fluid imgani rounded-circle" alt="..." style="width: 100%;margin-top: 100px;height: 250px;border-radius: 15px;">
             </div>
             <div class="col-lg-3">
-                <img src="{% static 'images/bg13.png' %}" class="img-fluid rounded-circle" alt="..." style="width: 100%;margin-top: 300px;height: 250px;border-radius: 15px;">
+                <img src="{% static 'images/bg13.png' %}" class="img-fluid imgani rounded-circle" alt="..." style="width: 100%;margin-top: 150px;height: 250px;border-radius: 15px;">
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 text1">
                 <h2 class="text-center text-white" style="margin-top: 100px;font-family: 'Courier New', Courier, monospace;"><b>We help you to <br>Get your Dream Job</b></h2><br>
                 <ul style="list-style-type: square;">
                   <li style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;"><h6 class="text-white " style="text-align: justify;">Hire-Me help you to get your dream job, with our placement support.</h6></li>
@@ -339,8 +339,8 @@ HOME
     <div class="row">
       <div class="col-lg-1"></div>
       <div class="col-lg-3">
-        <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-          <div class="card-body">
+        <div class="card card1 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+          <div class="card-body cd">
             <h5 class="card-title"><i class="bi bi-chat-left-quote-fill"></i></h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <p class="card-text"><small class="text-body-secondary">-Person1-</small></p>
@@ -349,8 +349,8 @@ HOME
       
       </div>
       <div class="col-lg-3">
-        <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-          <div class="card-body">
+        <div class="card card1 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+          <div class="card-body cd">
             <h5 class="card-title"><i class="bi bi-chat-left-quote-fill"></i></h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <p class="card-text"><small class="text-body-secondary">-Person2-</small></p>
@@ -359,8 +359,8 @@ HOME
       
       </div>  
       <div class="col-lg-3">
-        <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-          <div class="card-body">
+        <div class="card card1 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+          <div class="card-body cd">
             <h5 class="card-title"><i class="bi bi-chat-left-quote-fill"></i></h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <p class="card-text"><small class="text-body-secondary">-Person3-</small></p>
@@ -397,8 +397,8 @@ HOME
           <li style="color: rgb(1, 65, 87);"><a href="#" style="color: rgb(1, 65, 87);text-decoration: none;">Home</a></li>
           <li style="color: rgb(1, 65, 87);"><a href="#section3" style="color: rgb(1, 65, 87);text-decoration: none;">About Us</a></li>
           <li style="color: rgb(1, 65, 87);"><a href="#section4" style="color: rgb(1, 65, 87);text-decoration: none;">Find Jobs</a></li>
-          <li style="color: rgb(1, 65, 87);"><a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal" style="color: rgb(1, 65, 87);text-decoration: none;">Login</a></li>
-          <li style="color: rgb(1, 65, 87);"><a href="#" data-bs-toggle="modal" data-bs-target="#registrationmodal" style="color: rgb(1, 65, 87);text-decoration: none;">Register</a></li>
+          <li style="color: rgb(1, 65, 87);"><a href="#" style="color: rgb(1, 65, 87);text-decoration: none;">profile</a></li>
+          <li style="color: rgb(1, 65, 87);"><a href="/" style="color: rgb(1, 65, 87);text-decoration: none;">logout</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-3">
@@ -434,15 +434,48 @@ HOME
   <p class="text-white text-center"><i class="bi bi-info-circle"></i>Hire-me.com | All rights reserved.</p>
 </div>
 
+
+
+
 <style>
-  .card1 :hover{
-    background-color: rgb(236, 236, 237);
-    color: white;
+    /* Define the animation */
+    @keyframes imageAnimation {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    /* Apply the animation to the image on hover */
+    img.imgani:hover {
+      animation: imageAnimation 1s infinite;
+    }
+</style>
+<style>
+  h2 {
+  font-size: 2rem; /* default font size */
+  transition: font-size 0.2s ease-in-out; /* transition effect */
+  }
+
+  h2:hover {
+  font-size: 2.6rem; /* larger font size on hover */
   }
 </style>
+<style>
+  .card1:hover {
+  transform: scale(1.12);
+}
+</style>
+<style>
+  h3:hover {
+  transform: scale(1.2);
+}
+</style>
 
-
-
+<style>
+  .card1:hover {
+  transform: scale(1.12);
+}
+</style>
 {% include 'login.html' %}
 {% include 'register.html' %}
 {% endblock %}
